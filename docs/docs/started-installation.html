@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Background Zoom Documentation ">
+    <meta name="author" content="DoMeraki">
+    <title>
+      Getting Started Installation| Do Zoom  
+    </title>
+
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+    <link rel="stylesheet" href="../assets/css/Do.Zoom.min.css">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+
+    <!-- javascript -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/Do.Zoom.min.js"></script>
+
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/clipboard.min.js"></script>
+  </head>
+  <body>
+  <div class="main-content">
+  <!-- header -->
+    <header class="header _sec">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="brand left">
+            <h3>
+               <a href="DoZoom">Do Zoom </a>  
+            </h3>
+          </div>
+          <a id="toggle-nav" class="right">
+            <span></span> <span></span> <span></span> 
+          </a> 
+          <div class="nav-bar">
+            <ul class="clearfix">
+              <li >
+                <a href="/">Home</a> 
+              </li>
+               <li class="active"> <a href="docs/started-welcome.html">Docs</a>  </li>
+              <li> <a href="{{download}}">Download</a>  </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div id="docs" class="container-fullwidth clearfix">
+
+					<div class="docs-navigation docnav-DoZoom large-4 medium-4 columns" 
+					
+					>
+					<div class="imdemo"><p>Hey,I'm Demo</p></div>
+					<div class="doc_nav_trigger"></div>
+<div class="item" bgsrc="../assets/img/1.jpg">
+						<ul>
+							<li class="ui-tabs-active ui-state-active">
+							<a>GETTING STARTED</a>
+								<ul>
+									<li >
+									<a href="started-welcome.html" >Welcome</a></li>
+									<li class="current"><a>Installation</a></li>
+								</ul>
+							</li>
+							<li><a href="api-options.html">API</a>
+								<ul>
+									<li><a href="#" >Options</a></li>
+									<li><a href="#" >Classes</a></li>
+									<li><a href="#" >Callbacks</a></li>
+								</ul>
+							</li>
+							 
+							
+						</ul>
+
+					</div> <!--  item -->
+					</div>
+
+					<div class="docs-content large-8 medium-8 columns">
+
+						<div id="docs-start">
+<h1>Getting Started</h1>
+							
+							
+
+
+							<div id="docs-start-Installation" class="docs-content-inner">
+             <h2 id="installation">Installation</h2>
+            <hr>
+			      <h3 id="include-css">Include CSS </h3>
+            <p>Include CSS file into your HTML head::</p>
+			
+						<div class="code-highlight code-highlight-with-label" data-label="HTML">
+								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
+
+								
+&lt;link rel=&quot;stylesheet&quot; href=&quot;DoZoom/jquery.Do.Zoom.min.css&quot;&gt;
+ 
+</code></pre> </div>
+
+            <h3 id="include-js">Include JS</h3>
+            <p>Include jQuery and 
+			<code>jquery.Do.Zoom.min.js</code>
+			into the footer.</p>
+          			<div class="code-highlight code-highlight-with-label" data-label="HTML">
+								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
+								
+&lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;DoZoom/jquery.Do.Zoom.min.js&quot;&gt;&lt;/script&gt;
+</code></pre> </div> 
+		  
+		  
+		  
+            <h3 id="set-html">Set HTML</h3>
+            <p>You don&#39;t need any special markup. there are two options without child or with child
+			
+  			<div class="code-highlight code-highlight-with-label" data-label="HTML">
+								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
+&lt;!-- With child --&gt;
+&lt;div class=&quot;doZoom&quot;&gt;
+  &lt;div class=&quot;item&quot; bgsrc=&quot;background.jpg&quot;&gt; Any Content &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- Without child --&gt;
+&lt;div class=&quot;doZoom&quot; bgsrc=&quot;background.jpg&quot;&gt;  Any Content  &lt;/div&gt;
+</code></pre> </div> 
+<blockquote>
+              <p>With Child option you should add <code class="custom">noChild:false</code> and <code class="custom">includeParent</code>.</p>
+            </blockquote>
+            <h3 id="call-the-plugin">initialize the plugin</h3>
+            <p>Now initialize DoZoom.</p>
+        			<div class="code-highlight  code-highlight-with-label" data-label="JavaScript">
+								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-javascript js-code">
+								
+$(document).ready(function(){
+  $(".doZoom").doZoom();
+});
+
+</code></pre></div>
+    
+         
+          							</div>
+
+
+						</div>
+
+
+					
+					 
+ 
+
+
+					</div>
+
+				</div>
+				
+				
+				</div> <!--  main-content -->
+ 
+
+ 	<div id="gotoTop" bgsrc="../assets/img/goto.jpg" class="icon-angle-up"></div>
+
+
+    <!-- Main -->
+     <script src="../assets/js/main.js"></script>
+  </body>
+</html>

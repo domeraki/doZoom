@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- head -->
+    <meta charset="utf-8">
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Background Zoom Documentation ">
+    <meta name="author" content="DoMeraki">
+    <title>
+      API Options | Do Zoom 
+    </title>
+
+    <!-- Stylesheets -->
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,400italic,300italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="../assets/css/docs.theme.min.css">
+    <link rel="stylesheet" href="../assets/css/Do.Zoom.min.css">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="shortcut icon" href="../assets/ico/favicon.png">
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!-- Yeah i know js should not be in header. Its required for demos.-->
+
+    <!-- javascript -->
+    <script src="../assets/js/plugins.js"></script>
+    <script src="../assets/js/Do.Zoom.min.js"></script>
+
+    <script src="../assets/js/prism.js"></script>
+    <script src="../assets/js/clipboard.min.js"></script>
+  </head>
+  <body>
+  <div class="main-content">
+  <!-- header -->
+    <header class="header _sec">
+      <div class="row">
+        <div class="large-12 columns">
+          <div class="brand left">
+            <h3>
+               <a href="DoZoom">Do Zoom </a>  
+            </h3>
+          </div>
+          <a id="toggle-nav" class="right">
+            <span></span> <span></span> <span></span> 
+          </a> 
+          <div class="nav-bar">
+            <ul class="clearfix">
+              <li >
+                <a href="/">Home</a> 
+              </li>
+               <li class="active"> <a href="docs/started-welcome.html">Docs</a>  </li>
+              <li> <a href="{{download}}">Download</a>  </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+<div id="docs" class="container-fullwidth clearfix">
+
+					<div class="docs-navigation docnav-DoZoom large-4 medium-4 columns" 
+					
+					>
+					<div class="imdemo"><p>Hey,I'm Demo</p></div>
+					<div class="doc_nav_trigger"></div>
+<div class="item" bgsrc="../assets/img/1.jpg">
+						<ul>
+							<li >
+							<a href="started-welcome.html">GETTING STARTED</a>
+								<ul>
+									<li >
+									<a href="started-welcome.html" >Welcome</a></li>
+									<li ><a href="started-installation.html">Installation</a></li>
+								</ul>
+							</li>
+							<li class="ui-tabs-active ui-state-active"><a >API</a>
+								<ul>
+									<li class="current"><a >Options</a></li>
+									<li><a href="api-classes.html" >Classes</a></li>
+									<li><a href="api-callbacks.html" >Callbacks</a></li>
+								</ul>
+							</li>
+							 
+							
+						</ul>
+
+					</div> <!--  item -->
+					</div>
+
+					<div class="docs-content large-8 medium-8 columns">
+
+						<div id="docs-api">
+<h1>API</h1>
+							
+							
+
+
+							<div id="docs-api-Options" class="docs-content-inner">
+             <h2 id="Options">Options</h2>
+            <hr>
+			   <div class="panel">
+ 							<section class="panel-content">
+								<p class="helper mb30">Here's the full list of all options which could be used. 
+								</p>
+														<div class="code-highlight">
+									<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
+ &lt;script&gt;
+		$('.dozoom').doZoom({
+		noChild:false,
+		// more options are listed below.
+		}); 
+&lt;/script&gt;
+</code></pre></div>
+								<!-- Table -->
+								<div class="table-responsive">
+									<table class="table table-striped">
+		<thead>
+		<tr>
+			<th>Option</th>
+			<th>Type</th>
+			<th>Default</th>
+			<th>Description</th>
+		</tr>
+		</thead>
+		<tbody>
+		<tr>
+			<td>srcAttribute</td>
+			<td>String</td>
+			<td>bgsrc</td>
+			<td>Attribute that specifies the URL of the background image.</td>
+		</tr>
+				<tr>
+			<td>noChild</td>
+			<td>Boolean</td>
+			<td>true</td>
+			<td>Background added to the selector that given while intalize doZoom if you want to add background to child turn this option to false.(next option related)</td>
+		</tr>
+
+		<tr>
+		  <td>selector</td>
+			<td>String</td>
+		  <td>.item</td>
+		  <td>DOM element for child that background will be add to.</td>
+		</tr>
+					<tr>
+			<td>includeParent</td>
+			<td>Boolean</td>
+			<td>true</td>
+			<td>If noChild is false you want do zoom even when mouse or toch not over child only but also it's parent.</td>
+		</tr>		
+		<tr>
+			<td>defultSize</td>
+			<td>String</td>
+			<td>cover</td>
+			<td>Default background size will be add before dozoom .</td>
+		</tr>
+		<tr>
+			<td>autoCover</td>
+			<td>Boolean</td>
+			<td>false</td>
+			<td>Make bacground size cover mathematically to make <code class="custom">transition</code> work .</td>
+		</tr>
+		<tr>
+			<td>restSize</td>
+			<td>Boolean</td>
+			<td>false</td>
+			<td>Reset Background size when leave bacground container.</td>
+		</tr>
+		<tr>
+			<td>restPosition</td>
+			<td>Boolean</td>
+			<td>false</td>
+			<td>Reset Background position when leave bacground container</td>
+		</tr>
+		<tr>
+			<td>showError</td>
+			<td>Boolean</td>
+			<td>true</td>
+			<td>displayed Error Message.</td>
+		</tr>
+		<tr>
+			<td>errorMessage</td>
+			<td>String</td>
+			<td>Faild to load image</td>
+			<td>Error Message text.</td>
+		</tr>
+		<tr>
+			<td>hideError</td>
+			<td>Boolean</td>
+			<td>true</td>
+			<td>Hide error after it's displayed</td>
+		</tr>
+		<tr>
+			<td>errorDuration</td>
+			<td>Number</td>
+			<td>3</td>
+			<td>The time (in seconds) to display the error before hide.</td>
+		</tr>
+		<tr>
+			<td>additionWidth</td>
+			<td>Number</td>
+			<td>0</td>
+			<td>Add Or Subtract width</td>
+		</tr>		<tr>
+			<td>additionHeight</td>
+			<td>Number</td>
+			<td>0</td>
+			<td>Add Or Subtract height</td>
+		</tr>	
+		<tr>
+			<td>debug</td>
+			<td>Boolean</td>
+			<td>false</td>
+			<td>Show debugging console</td>
+		</tr>	
+		<tr>
+			<td>destroy</td>
+			<td>string</td>
+			<td>-</td>
+			<td>Removes all events and elements created and attached by DoZoom for selected element.</td>
+		</tr>	
+ 
+		</tbody>
+	</table>
+								</div>
+								<!-- End of Table -->
+							</section>
+						</div>
+         
+          							</div>
+
+
+						</div>
+
+
+					
+					 
+ 
+
+
+					</div>
+
+				</div>
+				
+				
+				</div> <!--  main-content -->
+ 
+
+ 	<div id="gotoTop" bgsrc="../assets/img/goto.jpg" class="icon-angle-up"></div>
+
+
+    <!-- Main -->
+     <script src="../assets/js/main.js"></script>
+  </body>
+</html>
