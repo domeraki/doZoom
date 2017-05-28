@@ -1,24 +1,37 @@
 var $ = jQuery.noConflict();
 
- 
-
-var currentActiveSection = 'docs-start-installation';
-
-function onePageCurrentSection(){
-    $(".docs-content-inner").each(function(index) {
-        var h = $(this).offset().top;
-        var y = $(window).scrollTop();
-
-        if( y + 250 >= h && y < h + $(this).height() && $(this).attr('id') != currentActiveSection ) {
-            currentActiveSection = $(this).attr('id');
-        }
-    });
-
-    return currentActiveSection;
-}
 
 $(document).ready(function(){
- 
+ 			
+				// Module name: Copy to clipboard
+	// Dependencies: clipboard.js.min.js
+	// Docs: https://github.com/zenorocha/clipboard.js/
+	(function(){
+
+		var clipboard = new Clipboard('.js-copy-to-clipboard', {
+			target: function (trigger) {
+				return $(trigger).parent().find('.js-code')[0];
+			}
+		});
+
+		clipboard.on('success', function (e) {
+			e.clearSelection();
+
+			$(e.trigger).text('copied');
+			setTimeout(function () {
+				$(e.trigger).text('copy');
+			}, 700);
+
+		});
+
+		clipboard.on('error', function (e) {
+			$(e.trigger).text(getCopyMessage(e.action)).addClass('copy-code-error');
+			setTimeout(function () {
+				$(e.trigger).text('copy').removeClass('copy-code-error');
+			}, 1400);
+		});
+
+	})();
 
         // Scroll to Top
 
