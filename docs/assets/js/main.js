@@ -19,7 +19,6 @@ function onePageCurrentSection(){
 
 $(document).ready(function(){
  
-					
 
         // Scroll to Top
 
@@ -35,30 +34,6 @@ $(document).ready(function(){
 			$('body,html').animate({scrollTop:0},400);
             return false;
 		});
-
-
- 
-
- 
-
- 
-
- 
-		 
-
-
- 
-   
-
-
-
-       
- 
- 
- 
-
- 
-
 	// responsive nav
 	var responsiveNav = $('#toggle-nav');
 	var navBar = $('.nav-bar');
@@ -150,13 +125,8 @@ console.log("tablet");
 
  		restSize:false,
 		additionWidth:40,
- 		onChange:icaallbaack,
   		 		});
-				function icaallbaack(e) {
-   console.log(e)
-}				function iccaallbaack(e) {
-   console.log("onZoom")
-}				
+				
 
 
 });

@@ -9,7 +9,7 @@
     <meta name="description" content="Background Zoom Documentation ">
     <meta name="author" content="DoMeraki">
     <title>
-      Getting Started Installation| Do Zoom  
+      Getting Started | Installation| Do Zoom  
     </title>
 
     <!-- Stylesheets -->
@@ -36,8 +36,8 @@
     <script src="../assets/js/plugins.js"></script>
     <script src="../assets/js/Do.Zoom.min.js"></script>
 
-    <script src="../assets/js/prism.js"></script>
-    <script src="../assets/js/clipboard.min.js"></script>
+    
+    
   </head>
   <body>
   <div class="main-content">
@@ -56,10 +56,10 @@
           <div class="nav-bar">
             <ul class="clearfix">
               <li >
-                <a href="/">Home</a> 
+                <a href="/doZoom">Home</a> 
               </li>
                <li class="active"> <a href="docs/started-welcome.html">Docs</a>  </li>
-              <li> <a href="{{download}}">Download</a>  </li>
+              <li> <a href="https://github.com/domeraki/doZoom/archive/0.1.6.zip">Download</a>  </li>
               
             </ul>
           </div>
@@ -116,19 +116,19 @@
 								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
 
 								
-&lt;link rel=&quot;stylesheet&quot; href=&quot;DoZoom/jquery.Do.Zoom.min.css&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;DoZoom/Do.Zoom.min.css&quot;&gt;
  
 </code></pre> </div>
 
             <h3 id="include-js">Include JS</h3>
             <p>Include jQuery and 
-			<code>jquery.Do.Zoom.min.js</code>
+			<code>Do.Zoom.min.js</code>
 			into the footer.</p>
           			<div class="code-highlight code-highlight-with-label" data-label="HTML">
 								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-markup js-code">
 								
 &lt;script src=&quot;jquery.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;DoZoom/jquery.Do.Zoom.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;DoZoom/Do.Zoom.min.js&quot;&gt;&lt;/script&gt;
 </code></pre> </div> 
 		  
 		  
@@ -149,15 +149,25 @@
 <blockquote>
               <p>With Child option you should add <code class="custom">noChild:false</code> and <code class="custom">includeParent</code>.</p>
             </blockquote>
-            <h3 id="call-the-plugin">initialize the plugin</h3>
-            <p>Now initialize DoZoom.</p>
+            <h3 id="call-the-plugin">Using the plugin
+</h3>
+            <p>For non-AMD just use the plugin the same way they always have </p>
         			<div class="code-highlight  code-highlight-with-label" data-label="JavaScript">
 								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-javascript js-code">
 								
 $(document).ready(function(){
-  $(".doZoom").doZoom();
+  $('.doZoom').doZoom();
 });
 
+</code></pre></div>
+
+         <p>For AMD you don't need to use shim</p>
+        			<div class="code-highlight  code-highlight-with-label" data-label="JavaScript">
+								<span class="js-copy-to-clipboard copy-code">copy</span> <pre><code class="language-javascript js-code">
+								
+require(['jquery', 'jquery.doZoom'], function($) {
+  $('.doZoom').doZoom();
+});
 </code></pre></div>
     
          

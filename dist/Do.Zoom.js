@@ -2,7 +2,6 @@
  doZoom 0.1.6
  http://domeraki.github.io/doZoom
  MIT licensed
-
  Copyright (C) 2017 domeraki.com - A project by DoMeraki
 */
 (function(c) {
